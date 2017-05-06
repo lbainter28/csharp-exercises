@@ -7,7 +7,7 @@
 
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>5ae8a68e-5ff5-4986-b956-f39a04d31e7c</ProjectGuid>
+    <ProjectGuid>1de13fbe-77c6-41e7-99f2-e4947b067d2d</ProjectGuid>
     <RootNamespace>Restaurant</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>

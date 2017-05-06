@@ -5,13 +5,6 @@ using System.Threading.Tasks;
 
 namespace Restaurant
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-        }
-    }
-
     public class MenuItem
     {
         private decimal price;
@@ -20,6 +13,14 @@ namespace Restaurant
         private bool isNew;
 
         private static readonly string[] categories = new string[] { "appetizer", "main dish", "dessert" };
+
+        public MenuItem(decimal price, string description, string category, bool isNew)
+        {
+            Price = price;
+            Description = description;
+            Category = category;
+            IsNew = isNew;
+        }
 
         public decimal Price
         {
@@ -51,51 +52,5 @@ namespace Restaurant
             get { return isNew; }
             private set { isNew = value; }
         }
-
-        public MenuItem(string description, decimal price, string category, bool isNew)
-        {
-            Description = description;
-            Price = price;
-            Category = category;
-            IsNew = isNew;
-        }
-    }
-
-
-    public class Menu
-    {
-        private readonly List<MenuItem> menuItems;
-        private DateTime lastUpdated;
-
-        public Menu()
-        {
-            menuItems = new List<MenuItem>();
-            LastUpdated = DateTime.Now;
-        }
-
-        public DateTime LastUpdated
-        {
-            get { return lastUpdated; }
-            private set { lastUpdated = value; }
-        }
-
-        public MenuItem[] MenuItems
-        {
-            get
-            {
-                return menuItems.ToArray();
-            }
-        }
-
-        public void AddItem(MenuItem item)
-        {
-            menuItems.Add(item);
-            lastUpdated = DateTime.Now;
-        }
-
-
-
-
-
     }
 }
